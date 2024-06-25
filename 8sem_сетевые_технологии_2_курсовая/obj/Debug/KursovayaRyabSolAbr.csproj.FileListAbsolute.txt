@@ -1,0 +1,15 @@
+D:\Uch\8sem\stcur\AppTryOne\KursovayaRyabSolAbr\bin\Debug\KursovayaRyabSolAbr.exe
+D:\Uch\8sem\stcur\AppTryOne\KursovayaRyabSolAbr\bin\Debug\KursovayaRyabSolAbr.pdb
+D:\Uch\8sem\stcur\AppTryOne\KursovayaRyabSolAbr\obj\Debug\KursovayaRyabSolAbr.csproj.AssemblyReference.cache
+D:\Uch\8sem\stcur\AppTryOne\KursovayaRyabSolAbr\obj\Debug\KursovayaRyabSolAbr.About.resources
+D:\Uch\8sem\stcur\AppTryOne\KursovayaRyabSolAbr\obj\Debug\KursovayaRyabSolAbr.AppCreateLink.resources
+D:\Uch\8sem\stcur\AppTryOne\KursovayaRyabSolAbr\obj\Debug\KursovayaRyabSolAbr.AppReceive.resources
+D:\Uch\8sem\stcur\AppTryOne\KursovayaRyabSolAbr\obj\Debug\KursovayaRyabSolAbr.AppSend.resources
+D:\Uch\8sem\stcur\AppTryOne\KursovayaRyabSolAbr\obj\Debug\KursovayaRyabSolAbr.JoinTo.resources
+D:\Uch\8sem\stcur\AppTryOne\KursovayaRyabSolAbr\obj\Debug\KursovayaRyabSolAbr.MainPage.resources
+D:\Uch\8sem\stcur\AppTryOne\KursovayaRyabSolAbr\obj\Debug\KursovayaRyabSolAbr.Properties.Resources.resources
+D:\Uch\8sem\stcur\AppTryOne\KursovayaRyabSolAbr\obj\Debug\KursovayaRyabSolAbr.Reconnect.resources
+D:\Uch\8sem\stcur\AppTryOne\KursovayaRyabSolAbr\obj\Debug\KursovayaRyabSolAbr.csproj.GenerateResource.cache
+D:\Uch\8sem\stcur\AppTryOne\KursovayaRyabSolAbr\obj\Debug\KursovayaRyabSolAbr.csproj.CoreCompileInputs.cache
+D:\Uch\8sem\stcur\AppTryOne\KursovayaRyabSolAbr\obj\Debug\KursovayaRyabSolAbr.exe
+D:\Uch\8sem\stcur\AppTryOne\KursovayaRyabSolAbr\obj\Debug\KursovayaRyabSolAbr.pdb

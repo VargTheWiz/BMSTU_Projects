@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en" class="h-100">
+<head>
+    <meta charset="utf-8">
+    <title>HELLO EAP</title>
+    {% load static %}
+    <link rel=icon href="{% static 'favicon-16x16.png' %}" sizes=16x16 type=image/png>
+    <link rel=icon href="{% static 'favicon-32x32.png' %}" sizes=32x32 type=image/png>
+</head>
+<body>
+Hello BMSTU students!bahahahahahahahaha<br><!-- просто из шаблона -->
+Today is {{ current_date }}<br>
+Today is {{ data.current_date }} <!-- Из шаблона с переменной -->
+<ul>
+    {% for var in data.list %}
+        <li>We like {{ var }}</li> <!-- Тэг в шаблоне - цикл for -->
+    {% endfor %}
+</ul>
+<ul>
+    {% for var in data.list %} <!-- Несколько циклов -->
+        {% if var == 'python' %}
+            <li>We like {{ var }}</li>
+        {% elif var == 'django' %}
+            <li>We like {{ var }} a lot!</li>
+        {% else %}
+            <li>We do not like {{ var }}</li>
+        {% endif %}
+    {% endfor %}
+</ul>
+<ul>
+    {% for var in data.list2 %} <!-- Тэги - условия -->
+        {% if var == 'alpha1' %}
+            <li>Theres {{ 'alpha1' }}, yes?</li>
+        {% elif var == 'alpha' %}
+            <li>Theres no alpha1, only {{ 'alpha' }}</li>
+        {% elif var == 'django' %}
+            <li>We like {{ var }} a lot!</li>
+        {% else %}
+            <li>Цикл выполняется по всем элементам в дата и {{ var }}</li>
+        {% endif %}
+    {% endfor %}
+</ul>
+
+</body>
+</html>

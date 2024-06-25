@@ -1,0 +1,18 @@
+{% load static %}
+<br>
+<br>
+
+
+<table class="book-ele">
+    <tr>
+        <td>Наименование:</td>
+        <td>Автор:</td>
+    </tr>
+    <tr>
+        <td>{{ element.title }}</td>
+        <td>{{ element.author }}</td>
+    </tr>
+</table>
+
+<br>
+<img src="{% static '/covers' %}{{ element.pathtopic }}" width="300px">

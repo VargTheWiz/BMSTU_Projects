@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+
+{% block title %}Книга №{{ data.uslugi.id }}{% endblock %}
+
+{% block content %}
+    <div>Название: {{ data.uslugi.name }}</div>
+        <div>Описание: {{ data.uslugi.description }}</div>
+{% endblock %}

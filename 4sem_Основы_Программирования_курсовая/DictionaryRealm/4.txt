@@ -1,0 +1,8 @@
+2
+slovar1 ryablin 1984 3
+один one
+два two
+три three
+slovar2 myagkov 1944 2
+один one
+два two

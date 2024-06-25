@@ -1,0 +1,86 @@
+Turbo Assembler	 Version 3.1	    05/19/21 11:41:58	    Page 1
+lr3c.asm
+
+
+
+      1	0000			     MYCODE SEGMENT 'CODE'
+      2				     ASSUME CS:MYCODE, DS:MYCODE
+      3	0000  80		     LET1  DB 'А'
+      4	0001  81		     LET2  DB 'Б'
+      5	0002  82		     LET3  DB 'В'
+      6	0003			     START:
+      7				     ; Загрузка	сегментного регистра данных DS
+      8	0003  0E			  PUSH CS
+      9	0004  1F			  POP  DS
+     10
+     11				     ; Вывод символа А на экран
+     12	0005  B4 02			  MOV AH, 02
+     13	0007  8A 16 0000r		  MOV DL, LET1
+     14	000B  CD 21			  INT 21H
+     15				     ; Перевод на новую	строку и возврат каретки
+     16	000D  B4 02			  MOV AH, 02
+     17	000F  B2 0D			  MOV DL, 13
+     18	0011  CD 21			  INT 21H
+     19	0013  B4 02			  MOV AH, 02
+     20	0015  B2 0A			  MOV DL, 10
+     21	0017  CD 21			  INT 21H
+     22
+     23				     ; Вывод символа Б на экран
+     24	0019  B4 02			  MOV AH, 02
+     25	001B  8A 16 0001r		  MOV DL, LET2
+     26	001F  CD 21			  INT 21H
+     27				     ; Перевод на новую	строку и возврат каретки
+     28	0021  B4 02			  MOV AH, 02
+     29	0023  B2 0D			  MOV DL, 13
+     30	0025  CD 21			  INT 21H
+     31	0027  B4 02			  MOV AH, 02
+     32	0029  B2 0A			  MOV DL, 10
+     33	002B  CD 21			  INT 21H
+     34
+     35				      ;	Вывод символа В	на экран
+     36	002D  B4 02			  MOV AH, 02
+     37	002F  8A 16 0002r		  MOV DL, LET3
+     38	0033  CD 21			  INT 21H
+     39				     ; Перевод на новую	строку и возврат каретки
+     40	0035  B4 02			  MOV AH, 02
+     41	0037  B2 0D			  MOV DL, 13
+     42	0039  CD 21			  INT 21H
+     43	003B  B4 02			  MOV AH, 02
+     44	003D  B2 0A			  MOV DL, 10
+     45	003F  CD 21			  INT 21H
+     46
+     47				     ; Ожидание	завершения программы
+     48	0041  B4 01			  MOV AH, 01H
+     49	0043  CD 21			  INT 021H
+     50				     ; Выход из	программы
+     51	0045  B0 00			  MOV AL, 0
+     52	0047  B4 4C			  MOV AH, 4CH
+     53	0049  CD 21			  INT 21H
+     54
+     55	004B			     MYCODE ENDS
+     56				     END START
+Turbo Assembler	 Version 3.1	    05/19/21 11:41:58	    Page 2
+Symbol Table
+
+
+
+
+Symbol Name		Type   Value			   Cref	(defined at #)
+
+??DATE			Text   "05/19/21"
+??FILENAME		Text   "lr3c	"
+??TIME			Text   "11:41:58"
+??VERSION		Number 030A
+@CPU			Text   0101H
+@CURSEG			Text   MYCODE			   #1
+@FILENAME		Text   LR3C
+@WORDSIZE		Text   2			   #1
+LET1			Byte   MYCODE:0000		   #3  13
+LET2			Byte   MYCODE:0001		   #4  25
+LET3			Byte   MYCODE:0002		   #5  37
+START			Near   MYCODE:0003		   #6  56
+
+Groups & Segments	Bit Size Align	Combine	Class	   Cref	(defined at #)
+
+MYCODE			16  004B Para	none	CODE	   #1  2  2
+

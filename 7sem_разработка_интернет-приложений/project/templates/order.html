@@ -1,0 +1,18 @@
+{% extends 'orders.html' %}<!-- Наследование шаблонов-->
+{% block title %}Книжка №{{ data.id }}{% endblock %}
+{% block content %}
+    <div class="order-text">Информация о заказе №{{ data.id }}</div>
+    {% for order in data.orders %}
+        {% if order.id == data.id %}
+            {% include 'book_element.html' with element=order %}
+        {% endif %}
+    {% empty %}
+        <li>Список пуст</li>
+    {% endfor %}
+{% endblock %}
+
+
+
+    <!--{% include 'book_element.html' with element=data %}-->
+    <!-- <a href="{% url 'order_url' data.id %}">{{ data.title }}</a>-->
+    <!--<li><a href="{% url 'order_url' data.id %}">{{ data.orders.id }}</a></li> -->

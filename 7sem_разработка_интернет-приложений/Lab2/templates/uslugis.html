@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Список услуг{% endblock %}
+
+{% block content %}
+<ul>
+    {% for uslugi in data.uslugis %}
+       {% include 'qwu.html' with elem=uslugi %}
+    {% empty %}
+        <li>Список пуст</li>
+    {% endfor %}
+</ul>
+{% endblock %}

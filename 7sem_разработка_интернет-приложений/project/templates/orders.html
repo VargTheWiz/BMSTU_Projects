@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block title %}Список заказов{% endblock %}
+
+{% block content %}
+    <!----
+    <ul>
+        {% for order in data.orders %}
+            <li><a href="{% url 'order_url' order.id %}">{{ order.title }}</a></li>
+        {% empty %}
+            <li>Список пуст</li>
+        {% endfor %}
+    </ul>
+    ---->
+    <ul><!---сделаю список через инклюд--->
+        {% for i in data.orders %}
+            {% include 'order_element.html' with element=i %}
+        {% empty %}
+            <li>Список пуст</li>
+        {% endfor %}
+    </ul>
+    Второй список
+
+    <!--этот список для ограничения по колву итемов черезк нопку-->
+    {% if input_text %}
+        <ul>
+            {% for i in data.orders|slice:input_text %}
+                {% include 'order_element.html' with element=i %}
+            {% empty %}
+                <li>Список пуст</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+
+    Жмякните чтобы смотреть только N книжек<br>
+    не работает, я в любом случае в хвостовой сессии, пойду вторую лабу делать где могу<br>
+    <form action="" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <input name="text" type="text"><input type="submit" value="Жмяк!">
+    </form>
+
+{% endblock %}
